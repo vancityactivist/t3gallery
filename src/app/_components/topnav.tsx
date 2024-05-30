@@ -1,4 +1,4 @@
-import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/nextjs";
+ import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/nextjs";
 
 export function TopNav() {
     return(
