@@ -6,7 +6,7 @@ export function TopNav() {
     
     return(
       <nav className="flex items-center justify-between w-full bg-black p-4 text-xl font-semibold border-b">
-        <div>Gallery</div>
+        <div><a href="/">Gallery</a></div>
         <div className="flex flex-row items-center gap-4">
             <SignedOut>
                 <SignInButton />
