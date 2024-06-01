@@ -20,20 +20,19 @@ export function CSPostHogProvider({ children }: { children: React.ReactNode }) {
 }
 
 function PostHogAuthWrapper({ children }: { children: React.ReactNode }) {
-  
   const auth = useAuth();
   const userInfo = useUser();
 
   useEffect(() => {
     if (userInfo.user) {
-      posthog.identify(userInfo.user.id, {email: userInfo.user.emailAddresses});
+      posthog.identify(userInfo.user.id, {
+        email: userInfo.user.emailAddresses[0]?.emailAddress,
+        name: userInfo.user.fullName,
+      });
     } else if (!auth.isSignedIn) {
       posthog.reset();
     }
   }, [auth, userInfo]);
-  
-  return(
-    children
-  )
 
+  return children;
 }
