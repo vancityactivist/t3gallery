@@ -11,7 +11,7 @@
 = [x] "taint" (server-only)
 - [x] Use Next/Image component
 - [x] Error management (w/ Sentry)
-- [ ] Routing/image page
+- [x] Routing/image page
 - [ ] Delete button (w. server actions)
 - [ ] Analytics (posthog)
 - [ ] Ratelimiting (upstash)
